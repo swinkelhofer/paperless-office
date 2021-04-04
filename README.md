@@ -25,6 +25,10 @@ Some of the key-features are:
 * docker-compose (recommended)
 * Access to any Git provider (e.g. [GitLab](https://gitlab.com) or [GitHub](https://github.com), recommeded)
 
+## Screenshots
+
+![](assets/screenshots.png)
+
 ## How it works
 
 1. Scan a document to a PDF file
