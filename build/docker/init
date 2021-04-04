@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cp -rf /html/* /srv/
+
+paperless-office "$@"

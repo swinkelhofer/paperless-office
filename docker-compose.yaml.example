@@ -1,0 +1,10 @@
+version: "3.6"
+services:
+  paperless-office:
+    image: ghcr.io/swinkelhofer/paperless-office:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - </some/folder>/processed:/srv/data/processed
+      - </some/folder>/raw:/srv/data/raw
+    restart: always

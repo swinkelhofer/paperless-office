@@ -1,0 +1,10 @@
+examples
+web/dist
+web/yarn-error.log
+web/data
+docker-compose.yaml
+viewer/dist
+viewer/yarn-error.log
+viewer/data
+node_modules
+db.sqlite
