@@ -109,3 +109,6 @@ pages:
 
 Each operation in paperless-office Web UI leads to a push to your Git repository. The CI pipeline will be triggered on each push, therefore re-deploying GitLab pages. The webviewer is then available via https://username.gitlab.io/paperless-office-documents
 
+# Contribution
+
+See [the contribution guidelines](CONTRIBUTING.md)
