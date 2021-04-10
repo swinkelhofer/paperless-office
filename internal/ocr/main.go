@@ -27,6 +27,9 @@ func NewOCR(rawPDFFile string) (*OCR, error) {
 		appConfig = config.NewConfig()
 		hash      xid.ID
 	)
+	if !strings.HasSuffix(strings.ToLower(rawPDFFile), ".pdf") {
+		return nil, fmt.Errorf("%s is not a PDF file", rawPDFFile)
+	}
 
 	if hash, err = xid.FromString(strings.ReplaceAll(filepath.Base(rawPDFFile), filepath.Ext(rawPDFFile), "")); err == nil {
 		ocr.Hash = hash.String()
@@ -35,7 +38,7 @@ func NewOCR(rawPDFFile string) (*OCR, error) {
 		ocr.RawPDFFile = filepath.Join(filepath.Dir(rawPDFFile), fmt.Sprintf("%s.pdf", ocr.Hash))
 
 		if err = os.Rename(rawPDFFile, ocr.RawPDFFile); err != nil {
-			log.Errorf("Move error: %w", err)
+			log.Errorf("Move error: %s", err.Error())
 			return nil, err
 		}
 		return nil, nil

@@ -1,12 +1,11 @@
 package paperlessoffice
 
 import (
-	"io/fs"
-
 	"gitlab.com/swinkelhofer/paperless-office/internal/config"
+	"gitlab.com/swinkelhofer/paperless-office/internal/ocr"
 )
 
 var (
 	globalConfig config.Configuration
-	pdfChan      chan fs.FileInfo
+	pdfChan      chan *ocr.OCR
 )
