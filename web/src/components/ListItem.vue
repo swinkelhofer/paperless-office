@@ -1,6 +1,6 @@
 <template>
-    <v-list-item link class="elevation-1 mb-2 py-2">
-        <v-list-item-action>
+    <v-list-item link class="elevation-1 mb-2 py-2 flex-column flex-md-row">
+        <v-list-item-action class="d-none d-md-flex">
             <v-btn fab color="primary" dark>
                 <v-icon>mdi-file-pdf</v-icon>
             </v-btn>
@@ -21,12 +21,13 @@
                 </v-chip>
             </v-list-item-subtitle>
         </v-list-item-content>
-        <v-chip color="primary" outlined class="mx-4">
-            <v-icon class="mr-2">mdi-calendar-month</v-icon>{{ date(value.date) }}
-        </v-chip>
+        
 
-        <v-list-item-action v-for="button in actionButtons" :key="button.icon">
-            <v-btn fab small color="primary" dark @click="button.func">
+        <v-list-item-action class="flex-row justify-start align-center ml-0 ml-md-4">
+            <v-chip color="primary" outlined class="mx-2">
+                <v-icon class="mr-2">mdi-calendar-month</v-icon>{{ date(value.date) }}
+            </v-chip>
+            <v-btn fab small color="primary" class="mx-2" dark @click="button.func" v-for="button in actionButtons" :key="button.icon">
                 <v-icon v-text="button.icon"></v-icon>
             </v-btn>
         </v-list-item-action>
@@ -70,5 +71,9 @@ export default {
 <style lang="scss" scoped>
 .v-list-item.v-list-item--link {
     border: 1px solid rgba(0,0,0,.1);
+    min-height: 0px;
+    .v-list-item__content {
+        width: 100%;
+    }
 }
 </style>
