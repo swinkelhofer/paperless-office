@@ -1,0 +1,12 @@
+version: "3.6"
+services:
+  paperless-office:
+    build:
+      context: ./
+      dockerfile: ./build/docker/Dockerfile
+    ports:
+      - "5555:8000"
+    volumes:
+      - ./web/data/processed:/srv/data/processed
+      - ./web/data/raw:/srv/data/raw
+    restart: always
