@@ -17,7 +17,7 @@
         "vuetify-loader": "^1.7.2"
     },
     "devDependencies": {
-        "axios": "^0.21.1",
+        "axios": "^0.21.2",
         "babel-core": "^6.26.3",
         "babel-loader": "^8.2.2",
         "css-loader": "^5.1.3",
