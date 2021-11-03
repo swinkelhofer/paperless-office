@@ -70,7 +70,7 @@ module.exports = {
                             additionalData: "@import './src/sass/variables.scss';"
                         },
                     },
-                    
+
                 ],
             },
             {
@@ -99,7 +99,7 @@ module.exports = {
 
 }
 
-if(process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
     module.exports.watch = false
 
     module.exports.optimization = {
