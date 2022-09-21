@@ -14,7 +14,7 @@
         "@babel/core": "7.13.10",
         "copy-webpack-plugin": "^9.0.1",
         "vue-template-compiler": "2.6.12",
-        "vuetify": "2.4.7",
+        "vuetify": "2.6.10",
         "vuetify-loader": "1.7.2"
     },
     "devDependencies": {
